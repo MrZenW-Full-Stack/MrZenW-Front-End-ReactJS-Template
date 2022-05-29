@@ -1,0 +1,27 @@
+version: "3"
+
+networks:
+  mrzenwdotcom:
+    external: true
+
+services:
+  cicd.publish.production:
+    build:
+      context: .
+      dockerfile: ./cicd/deploy.dockerfile
+    image: registry.gitlab.com/MrZenW-Full-Stack/MrZenW-Front-End-ReactJS-Template:latest
+    container_name: mrzenw_front_end_reactjs_template__container_production
+    environment:
+      - CICD_PIPE_NAME=publish_to_production
+    networks:
+      - mrzenwdotcom
+  cicd.publish.test:
+    build:
+      context: .
+      dockerfile: ./cicd/deploy.dockerfile
+    image: registry.gitlab.com/MrZenW-Full-Stack/MrZenW-Front-End-ReactJS-Template:latest
+    container_name: mrzenw_front_end_reactjs_template__container_test
+    environment:
+      - CICD_PIPE_NAME=publish_to_test
+    networks:
+      - mrzenwdotcom

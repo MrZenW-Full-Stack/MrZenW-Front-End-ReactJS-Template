@@ -1,4 +1,4 @@
-# MrZenW Front-end Template
+# MrZenW Front-End Template
 
 
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/MrZenW-Full-Stack/MrZenW-Front-end-Template.git
+git remote add origin https://gitlab.com/MrZenW-Full-Stack/MrZenW-Front-End-Template.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/MrZenW-Full-Stack/MrZenW-Front-end-Template/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.com/MrZenW-Full-Stack/MrZenW-Front-End-Template/-/settings/integrations)
 
 ## Collaborate with your team
 

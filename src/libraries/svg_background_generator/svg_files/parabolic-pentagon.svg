@@ -1,0 +1,31 @@
+﻿<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'>
+  <rect fill='#ffffff' width='2000' height='1500'/>
+  <defs>
+    <path fill='none' stroke-width='100' id='a' d='M0.74-509.63l485.39 352.65l-185.4 570.61h-599.97l-185.4-570.61L0.74-509.63 M0.74-510.87l-486.56 353.51l185.85 571.99h601.42L487.3-157.36L0.74-510.87L0.74-510.87z'/>
+  </defs>
+  <g transform='rotate(0 0 0)' style='transform-origin:center'>
+    <g transform='rotate(0 0 0)' style='transform-origin:center'>
+      <g transform='rotate(0 0 0)' style='transform-origin:center'>
+        <g transform='translate(1000 750)'>
+          <use stroke='#ffffff' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#fdfdfd' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#fcfcfc' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#fafafa' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#f8f8f8' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#f7f7f7' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#f5f5f5' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#f3f3f3' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#f2f2f2' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#f0f0f0' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#eeeeee' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#ededed' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#ebebeb' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#e9e9e9' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#e8e8e8' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#e6e6e6' href='#a' transform='rotate(0 0 0)'/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <rect x='0' y='0' fill='#HOLDER' fill-opacity='0.6' width='100%' height='100%'/>
+</svg>

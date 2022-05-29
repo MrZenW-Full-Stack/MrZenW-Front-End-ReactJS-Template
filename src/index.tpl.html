@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    function __checkSupportedBrowser() {
+      var ua = navigator.userAgent.toLowerCase();
+      // Internet Explorer 6-11
+      var isIE = /*@cc_on!@*/false || !!document.documentMode;
+      // Chrome on iOS
+      var isChromeOnIOS = (ua.indexOf('CriOS'.toLowerCase()) > -1);
+      // Opera 8.0+
+      var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+      // Firefox 1.0+
+      var isFirefox = typeof InstallTrigger !== 'undefined';
+      // Safari 3.0+ "[object HTMLElementConstructor]" 
+      var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+      isSafari = isSafari || (ua.indexOf('safari') > -1 && ((!isChromeOnIOS) || (ua.indexOf('chrome') === -1))); // found safari but don't found chrome = safari
+      // Edge 20+
+      var isEdge = !isIE && !!window.StyleMedia;
+      // Chrome 1 - 79
+      var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+      // Chrome 80+
+      isChrome = isChrome || (!!window.chrome && (!!window.chrome.loadTimes || !!window.chrome.csi))
+      // Edge (based on chromium) detection
+      var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
+      // Blink engine detection
+      var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+      return [
+        isEdgeChromium,
+        isChrome,
+        isFirefox,
+        isSafari,
+        isChromeOnIOS,
+      ].indexOf(true) > -1;
+    }
+  </script>
+  <title>MrZenW.com</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, shrink-to-fit=no" />
+  <link type="text/plain" rel="author" href="humans.txt" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="MrZenW's front-end ReactJS template">
+  <meta name="app-ui-version" content="<%= process.env.APP_VERSION %>">
+</head>
+<body>
+<div id="react-root">
+  <img style="position: absolute; top: 50%; left: 50%; width: 200px; height:150px; margin: -70px 0 0 -100px;" src="<%= require('./assets/images/webapp/launching_progress.gif') %>" />
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'>
+  <rect fill='#HOLDER' width='2000' height='1500'/>
+  <defs>
+    <ellipse fill='none' stroke-width='200' id='a' rx='600' ry='450'/>
+  </defs>
+  <g transform='rotate(0 0 0)' style='transform-origin:center'>
+    <g transform='rotate(0 0 0)' style='transform-origin:center'>
+      <g transform='rotate(0 0 0)' style='transform-origin:center'>
+        <g transform='translate(1000 750)'>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#HOLDER' href='#a' transform='rotate(0 0 0)'/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

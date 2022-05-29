@@ -1,0 +1,12 @@
+body.dark-theme {
+  .leaderboard-container {
+    border-radius: 10px;
+    background-color: var(--theme-bg);
+    border: 1px solid #606060;
+    box-shadow: 0px 0px 3px #606060;
+    .header {
+      background-color: rgb(45, 45, 45);
+      color: #ffffff;
+    }
+  }
+}

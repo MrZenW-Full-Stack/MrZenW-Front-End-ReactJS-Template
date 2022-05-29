@@ -1,0 +1,23 @@
+.grecaptcha-badge {
+  display: none;
+}
+
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+@import "./common-spin.scss";
+@import "./common--light-theme.scss";
+@import "./common--dark-theme.scss";
+@import "./hover-effect.scss";
+
+
+.high-contrast-style {
+  filter: contrast(200%);
+}
+
+.radius-cycle {
+  border-radius: 50%;
+}

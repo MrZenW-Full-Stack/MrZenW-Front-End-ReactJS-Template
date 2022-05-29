@@ -1,0 +1,21 @@
+body.dark-theme {
+  .web-window {
+    border: 1px solid rgb(128, 128, 128);
+    // background-color: rgba(50, 50, 50, 1);
+    .web-window-overlayer {
+      background-color: black;
+      // opacity: 0.5;
+      opacity: 0;
+    }
+  }
+  .web-window.unfocus {
+    box-shadow: rgba(200, 200, 200, 1) 0px 0px 5px;
+    .web-window-title {
+      background-color: rgb(45, 45, 45);
+      color: #ffffff;
+    }
+  }
+  .web-window.focus {
+    box-shadow: rgba(200, 200, 200, 1) 0px 0px 15px;
+  }
+}

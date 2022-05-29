@@ -1,0 +1,39 @@
+.hover-zoom-in:hover {
+  transform: scale(1.03);
+}
+
+.hover-zoom-out:hover {
+  transform: scale(0.97);
+}
+
+.hover-box-shadow-on:hover {
+  box-shadow: 0px 0px 20px rgb(177, 177, 177);
+}
+
+.hover-border-on-1px:hover {
+  border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.hover-border-on-2px:hover {
+  border: 2px solid rgba(128, 128, 128, 0.5);
+}
+
+.hover-border-on-3px:hover {
+  border: 3px solid rgba(128, 128, 128, 0.5);
+}
+
+.hover-border-radius-on-2px:hover {
+  border-radius: 2px;
+}
+
+.hover-border-radius-on-3px:hover {
+  border-radius: 3px;
+}
+
+.hover-border-radius-on-5px:hover {
+  border-radius: 5px;
+}
+
+.hover-border-radius-on-50percentage:hover {
+  border-radius: 50%;
+}

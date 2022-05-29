@@ -1,0 +1,40 @@
+﻿<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'>
+  <rect fill='#ffffff' width='2000' height='1500'/>
+  <defs>
+    <path fill='none' stroke-width='200' id='a' d='M0-478l-413.96 717h827.92L0-478l-413.96 717h827.92z'/>
+  </defs>
+  <g transform='rotate(0 0 0)' style='transform-origin:center'>
+    <g transform='rotate(0 0 0)' style='transform-origin:center'>
+      <g transform='rotate(0 0 0)' style='transform-origin:center'>
+        <g transform='translate(1000 750)'>
+          <use stroke='#ffffff' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#fbfbfb' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#f7f7f7' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#f4f4f4' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#f0f0f0' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#ececec' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#e9e9e9' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#e5e5e5' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#e1e1e1' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#dedede' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#dadada' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#d6d6d6' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#d3d3d3' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#cfcfcf' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#cbcbcb' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#c8c8c8' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#c4c4c4' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#c1c1c1' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#bdbdbd' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#bababa' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#b6b6b6' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#b2b2b2' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#afafaf' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#ababab' href='#a' transform='rotate(0 0 0)'/>
+          <use stroke='#a8a8a8' href='#a' transform='rotate(0 0 0)'/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <rect x='0' y='0' fill='#HOLDER' fill-opacity='0.6' width='100%' height='100%'/>
+</svg>

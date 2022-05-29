@@ -1,0 +1,12 @@
+body.light-theme {
+  .leaderboard-container {
+    border-radius: 10px;
+    background-color: var(--theme-bg);
+    border: 1px solid #d7d7d7;
+    box-shadow: 0px 0px 3px #d7d7d7;
+    .header {
+      background-color: rgb(246, 246, 246);
+      color: gray;
+    }
+  }
+}

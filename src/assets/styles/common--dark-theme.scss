@@ -1,0 +1,58 @@
+body.dark-theme {
+  --theme-bg-gradient: linear-gradient(197deg, rgb(54, 73, 62) 20%, rgb(62, 56, 79) 40%, rgb(79, 86, 55) 60%, rgb(57, 97, 81) 80%, rgb(50, 84, 78) 100%);
+  --theme-color: white;
+  --theme-bg: rgb(33, 33, 33);
+
+  background-image: var(--theme-bg-gradient);
+  color: var(--theme-color);
+  #root {
+    // background-color: var(--theme-bg);
+    color: var(--theme-color);
+  }
+  .theme-bg-glass {
+    background-color: rgba(33, 33, 33, 0.8);
+    backdrop-filter: saturate(180%) blur(10px);
+  }
+  .playground {
+    .workarea {
+      // background-image: var(--theme-bg-gradient);
+    }
+    .top-clock {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+  .control-panel-toolbar {
+    background: rgb(33, 33, 33);
+    border-top: 1px solid rgb(96, 96, 96);
+    color: var(--theme-color);
+    // background: rgba(45, 45, 45, 0.5);
+    // backdrop-filter: saturate(180%) blur(20px);
+    .collapse-button {
+      background: rgb(33, 33, 33);
+      border-top: 1px solid rgb(96, 96, 96);
+      border-left: 1px solid rgb(96, 96, 96);
+      border-right: 1px solid rgb(96, 96, 96);
+    }
+    .app-task-icon-button {
+      color: var(--theme-color);
+    }
+  }
+  .particles-bg-canvas-self {
+    // background-image: var(--theme-bg-gradient);
+    background-color: var(--theme-bg);
+  }
+  .component-loading {
+    color: var(--theme-color);
+    background-color: var(--theme-bg);
+  }
+  .component-information {
+    color: var(--theme-color);
+    background-color: var(--theme-bg);
+  }
+  .blockly-toolbox-collapse-button {
+    background-color: var(--theme-bg);
+    box-shadow: 2px 0px 5px grey;
+    // opacity: 0.5;
+    color: var(--theme-color);
+  }
+}
