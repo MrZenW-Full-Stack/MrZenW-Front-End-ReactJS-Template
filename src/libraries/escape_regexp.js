@@ -6,7 +6,7 @@
  * @desc [description]
  */
 const regExpForEscape = /[.*+\-?^${}()|/[\]\\]/g;
-module.exports = (regExp) => {
+exports.escapeRegExp = (regExp) => {
   // $& means the whole matched string;
   if (regExp instanceof RegExp) regExp = `${regExp.source}`;
   return (`${regExp}`).replace(regExpForEscape, '\\$&');

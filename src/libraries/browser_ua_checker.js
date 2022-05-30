@@ -87,4 +87,4 @@ const _module_ = {
     return /Android/i.test(navigator.userAgent);
   },
 };
-module.exports = Object.assign({}, _module_);
+module.exports = _module_;

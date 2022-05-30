@@ -8,7 +8,7 @@
 const protobuf = require('protobufjs');
 const mqtt = require('mqtt');
 const { nanoid } = require('nanoid');
-const mqttTopic2Regexp = require('$/libraries/mqtt_topic_2_regexp');
+const { mqttTopic2Regexp } = require('$/libraries/mqtt_topic_2_regexp');
 const { string2buffer } = require('$/libraries/string_and_buffer');
 const {
   awextify,

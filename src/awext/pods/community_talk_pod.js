@@ -1,5 +1,5 @@
 const { awextify, getAwext, parsePath } = require('$/awext/core');
-const sysendHelper = require('$/libraries/sysendHelper');
+const sysendHelper = require('$/libraries/sysend_helper');
 
 function communityTalkParamHitChecker(param, pattern) {
   if (pattern === '*') return true;
@@ -36,7 +36,7 @@ exports.grabCommunityTalkPod = (podName) => {
     sendCrossTalk(from, to, subject, payload) {
       if (from === '*') throw new Error('The sender\'s name cannot be a "*"');
       if (to === '*') throw new Error('The receiver\'s name cannot be a "*"');
-      return sysendHelper.broadcastSend(podNameString, {
+      return sysendHelper.publishBroadcast(podNameString, {
         channel: podNameString,
         from,
         to,
@@ -45,7 +45,7 @@ exports.grabCommunityTalkPod = (podName) => {
       });
     },
     receiveCrossTalk(from, to, subject, cb) {
-      return this.awextRegisterUnwatch(sysendHelper.broadcastListen(podNameString, (sysendEvent) => {
+      return this.awextRegisterUnwatch(sysendHelper.receiveBroadcast(podNameString, (sysendEvent) => {
         const { content: eventData } = sysendEvent;
         if (eventData.channel === podNameString
           && communityTalkParamHitChecker(eventData.from, from)
@@ -55,11 +55,11 @@ exports.grabCommunityTalkPod = (podName) => {
         }
       }));
     },
-    crossResponse(cb) {
-      return sysendHelper.response(podNameString, cb);
+    crossListen(cb) {
+      return sysendHelper.listenTo(podNameString, cb);
     },
     crossRequest(data) {
-      return sysendHelper.require(podNameString, data);
+      return sysendHelper.request(podNameString, data);
     },
   });
 };

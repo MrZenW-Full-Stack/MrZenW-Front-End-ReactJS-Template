@@ -1,4 +1,4 @@
-module.exports = (array, chunkSize) => {
+exports.array_chunk = (array, chunkSize) => {
   chunkSize = parseInt(chunkSize, 10);
   if (!chunkSize || chunkSize <= 0) throw new Error('chunkSize cannot less than zero!');
   const result = [];

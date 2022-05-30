@@ -36,7 +36,7 @@ const subtransformKeyList = [
   'perspective',
 ];
 
-exports.change = (currentTransform, itemName, itemValue) => {
+exports.changeTansformItem = (currentTransform, itemName, itemValue) => {
   currentTransform += '';
   if (exclusiveKeyList.indexOf(itemName) !== -1) {
     return itemName;
@@ -65,7 +65,7 @@ exports.change = (currentTransform, itemName, itemValue) => {
   }
 };
 
-exports.changeElement = (htmlElement, itemName, itemValue) => {
+exports.changeElementTransformItem = (htmlElement, itemName, itemValue) => {
   if (typeof itemName !== 'object' || itemName !== Object(itemName)) {
     itemName = {
       [itemName]: itemValue,
@@ -73,7 +73,7 @@ exports.changeElement = (htmlElement, itemName, itemValue) => {
   }
   let originalTransform = htmlElement.style.transform || '';
   Object.entries(itemName).forEach(([key, value]) => {
-    originalTransform = exports.change(originalTransform, key, value);
+    originalTransform = exports.changeTansformItem(originalTransform, key, value);
   });
   htmlElement.style.transform = originalTransform;
   return htmlElement;

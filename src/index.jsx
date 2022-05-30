@@ -45,9 +45,9 @@ const { SessionContext } = require('$/components/session_context');
 // const App = require('./App');
 const configService = require('$/services/config_service');
 const { fetchSessionService } = require('$/services/session_service');
-const { promiseKeeper } = require('$/libraries/promise-keeper');
+const { promiseKeeper } = require('$/libraries/promise_keeper');
 
-const { checkMobileDevice } = require('./libraries/check-mobile-device');
+const { checkMobileDevice } = require('./libraries/check_mobile_device');
 const { HelloView } = require('./blocks/hello/hello.view');
 
 const fetchGlobalConfigs = async (sessionService) => {

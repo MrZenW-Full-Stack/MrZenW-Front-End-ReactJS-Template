@@ -29,7 +29,7 @@ const getEventPosition = (event) => {
 };
 
 const ATTRIBUTE_NAME = 'x-moveabled';
-module.exports = (elem, handle, opts) => {
+exports.moveable = (elem, handle, opts) => {
   handle = handle || elem;
   if (handle.getAttribute(ATTRIBUTE_NAME) + '' === '1') {
     console.info('this div has been attached the special variable x-moveabled to 1');

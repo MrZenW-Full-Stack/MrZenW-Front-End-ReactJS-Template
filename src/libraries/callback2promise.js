@@ -1,4 +1,4 @@
-module.exports = function (oFunc, bindThis) {
+exports.callback2promise = function (oFunc, bindThis) {
   return function () {
     const self = bindThis || this;
     const args = Array.from(arguments);

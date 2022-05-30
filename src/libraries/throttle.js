@@ -7,7 +7,7 @@
  */
 const MINIMUM_GAP = 0.3 * 1e3;
 
-module.exports = (func, t) => {
+exports.createThrottle = (func, t) => {
   if ('function' !== typeof func) throw new Error('The first argument must be a function!');
   t = parseFloat(t) || 0;
   if (t <= 0) t = MINIMUM_GAP;

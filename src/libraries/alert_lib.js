@@ -9,7 +9,7 @@
 const sweetalert2 = require('sweetalert2');
 const { animateFrame, easeOutSine } = require('./animate');
 const { createElement } = require('./html_element_creator');
-const { createQueueWorker } = require('./queue-worker');
+const { createQueueWorker } = require('./queue_worker');
 
 const AlertLib = {};
 

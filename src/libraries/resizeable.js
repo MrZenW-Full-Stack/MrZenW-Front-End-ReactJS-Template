@@ -29,7 +29,7 @@ const getEventPosition = (event) => {
 };
 
 const ATTRIBUTE_NAME = 'x-resizeabled';
-module.exports = (elem, handle, opts) => {
+exports.resizeable = (elem, handle, opts) => {
   handle = handle || elem;
   if (handle.getAttribute(ATTRIBUTE_NAME) + '' === '1') {
     console.warn('x-resizeabled is 1');

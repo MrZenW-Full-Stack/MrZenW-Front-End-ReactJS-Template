@@ -36,7 +36,7 @@ QueueVariable.prototype.discard = function () {
   this.queue.splice(0);
 };
 
-function QueueProcessor(processor, queue, queueOpts) {
+function QueueProcessorClass(processor, queue, queueOpts) {
   if (typeof processor !== 'function') throw new Error('Processor need to be a function, but got a ' + (typeof processor));
   this._isDiscarded = false;
   this.processor = processor;
@@ -47,8 +47,8 @@ function QueueProcessor(processor, queue, queueOpts) {
   this._nextProcessBoundThis = this._nextProcess.bind(this);
   return this;
 }
-QueueProcessor.QueueVariable = QueueVariable;
-QueueProcessor.prototype._nextProcess = function () {
+QueueProcessorClass.QueueVariable = QueueVariable;
+QueueProcessorClass.prototype._nextProcess = function () {
   if (this._isDiscarded) return;
   const pickedVariable = this._pick();
   if (pickedVariable[0]) {
@@ -59,14 +59,14 @@ QueueProcessor.prototype._nextProcess = function () {
   }
 };
 
-QueueProcessor.prototype.push = function (v) {
+QueueProcessorClass.prototype.push = function (v) {
   this.queue.push(v);
   if (this._isPicking === false) {
     setTimeout(this._nextProcessBoundThis, 0);
   }
 };
 
-QueueProcessor.prototype._pick = function () {
+QueueProcessorClass.prototype._pick = function () {
   if (this.queue.queueLength() === 0) {
     return [false];
   } else {
@@ -74,8 +74,8 @@ QueueProcessor.prototype._pick = function () {
   }
 };
 
-QueueProcessor.prototype.discard = function () {
+QueueProcessorClass.prototype.discard = function () {
   this._isDiscarded = true;
   this.queue.discard();
 };
-module.exports = QueueProcessor;
+exports.QueueProcessorClass = QueueProcessorClass;

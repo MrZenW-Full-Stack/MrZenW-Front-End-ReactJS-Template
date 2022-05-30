@@ -5,7 +5,7 @@ const cx = require('classnames');
 const { createUseStyles } = require('react-jss');
 const { useAwext } = require('$/awext/core');
 const { animateFrame, easeOutBack, easeInBack } = require('$/libraries/animate');
-const { changeElement } = require('$/libraries/subtransform');
+const { changeElementTransformItem } = require('$/libraries/css_transform_changer');
 
 ReactModal.setAppElement('#root');
 const iconClosePng = require('$/assets/images/icon-close.png');
@@ -108,7 +108,7 @@ const actions = {
   handleClickCloseButton(event) {
     animateFrame((p) => {
       const progress = easeInBack(p);
-      changeElement(this.refChildrenContainer, 'scale', 1 - progress);
+      changeElementTransformItem(this.refChildrenContainer, 'scale', 1 - progress);
       this.refOverlay.style.opacity = (1 - p) * (1 - 0.4) + 0.5;
       if (p === 1) {
         const { onClickCloseButton } = this.useAwextArgs.props;
