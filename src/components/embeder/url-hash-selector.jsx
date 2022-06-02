@@ -9,7 +9,7 @@ const React = require('react');
 const { useAwext } = require('$/awext/core');
 const { historyAwext } = require('./historyAwext');
 
-module.exports = (props) => {
+exports.URLHashSelector = (props) => {
   useAwext({ props }, (inputArgs, forceUpdate, thisAwext) => {
     thisAwext.awextRegisterUnwatch(historyAwext.awextOn('pushstate', forceUpdate));
     thisAwext.awextRegisterUnwatch(historyAwext.awextOn('popstate', forceUpdate));

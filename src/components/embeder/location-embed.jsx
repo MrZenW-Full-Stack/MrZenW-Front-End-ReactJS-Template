@@ -7,13 +7,13 @@
  */
 const React = require('react');
 const PropTypes = require('prop-types');
-const { Embed } = require('./Embed');
+const { Embed } = require('./embed');
 
 module.exports = (props) => {
   const { embedTest, embedComponent, children } = props;
   const embedProps = Object.assign({}, props, {
     embedTest,
-    embedFactor: window.location.hash.slice(1),
+    embedFactor: window.location.pathname,
     embedComponent,
   });
   return (
