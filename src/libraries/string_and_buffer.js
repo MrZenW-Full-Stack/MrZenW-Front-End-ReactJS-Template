@@ -1,6 +1,6 @@
 /**
  * @author MrZenW
- * @email mrzenw@gmail.com, https://mrzenw.com
+ * @email MrZenW@gmail.com, https://MrZenW.com
  * @create date 2021-05-25 13:13:49
  * @modify date 2021-05-28 09:58:22
  * @desc [description]

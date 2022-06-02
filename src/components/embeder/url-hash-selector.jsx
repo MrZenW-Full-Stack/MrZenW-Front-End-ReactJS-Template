@@ -1,13 +1,13 @@
 /**
  * @author MrZenW
- * @email mrzenw@gmail.com, https://mrzenw.com
+ * @email MrZenW@gmail.com, https://MrZenW.com
  * @create date 2021-05-25 13:09:41
  * @modify date 2021-05-25 13:09:41
  * @desc [description]
  */
 const React = require('react');
 const { useAwext } = require('$/awext/core');
-const { historyAwext } = require('./historyAwext');
+const { historyAwext } = require('./history_awext');
 
 exports.URLHashSelector = (props) => {
   useAwext({ props }, (inputArgs, forceUpdate, thisAwext) => {

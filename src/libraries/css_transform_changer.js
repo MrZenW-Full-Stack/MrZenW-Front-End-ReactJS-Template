@@ -1,6 +1,6 @@
 /**
  * @author MrZenW
- * @email mrzenw@gmail.com, https://mrzenw.com
+ * @email MrZenW@gmail.com, https://MrZenW.com
  * @create date 2021-05-25 10:32:14
  * @modify date 2021-05-27 11:58:50
  * @desc This library is used for oprate the children variables of the transform in css

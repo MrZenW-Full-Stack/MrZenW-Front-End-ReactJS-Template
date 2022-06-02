@@ -1,8 +1,8 @@
 const authorInfo = `
 /**
  * @author MrZenW
- * @email mrzenw@gmail.com
- * @website https://mrzenw.com
+ * @email MrZenW@gmail.com
+ * @website https://MrZenW.com
  */
 `;
 

@@ -1,6 +1,6 @@
 /**
  * @author MrZenW
- * @email mrzenw@gmail.com, https://mrzenw.com
+ * @email MrZenW@gmail.com, https://MrZenW.com
  * @create date 2021-05-25 13:21:37
  * @modify date 2021-05-25 13:21:37
  * @desc [description]
@@ -42,7 +42,7 @@ const img = require('$/assets/images/arrow/arrow-down.png');
 
 const Loading = require('$/components/Loading');
 const { SessionContext } = require('$/components/session_context');
-// const App = require('./App');
+const { App } = require('./App');
 const configService = require('$/services/config_service');
 const { fetchSessionService } = require('$/services/session_service');
 const { promiseKeeper } = require('$/libraries/promise_keeper');
@@ -97,7 +97,8 @@ const getRootEmptyElement = () => {
     getRootEmptyElement(),
   );
   */
-  render(<HelloView />, document.getElementById('react-root'));
+  // render(<HelloView />, document.getElementById('react-root'));
+  render(<App />, document.getElementById('react-root'));
 })().catch((error) => {
   console.error(error, 'error');
 });
