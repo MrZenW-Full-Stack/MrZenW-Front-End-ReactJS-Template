@@ -13,14 +13,28 @@ export const Page1View = (props: any) => {
   return (
     <div>
       Hi there, this is page 1
+      <br />
       <button
         onClick={() => {
-          historyAwext.gotoHash(null, null, '/page_2');
+          historyAwext.gotoHash({ hello: 'page_2' }, null, '/page_2');
         }}
         type="button"
       >
         jump to page 2
       </button>
+      <hr />
+      currentState
+      <br />
+      {historyAwext.currentState && JSON.stringify(historyAwext.currentState)}
+      <hr />
+      hashPathname
+      <br />
+      {historyAwext.hashPathname && historyAwext.hashPathname}
+      <hr />
+      hashSearch
+      <br />
+      {historyAwext.hashSearch && historyAwext.hashSearch}
+      <hr />
     </div>
   );
 };

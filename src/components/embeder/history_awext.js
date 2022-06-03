@@ -2,7 +2,7 @@
  * @author MrZenW
  * @email MrZenW@gmail.com, https://MrZenW.com
  * @create date 2021-05-25 13:09:20
- * @modify date 2022-06-02 22:58:25
+ * @modify date 2022-06-03 22:33:22
  * @desc [description]
  */
 
@@ -10,7 +10,7 @@ const { awextify } = require('$/awext/core');
 const { pathSolve } = require('$/libraries/path_lib');
 
 const parseHashPathObject = (hash) => {
-  hash = `${hash}`;
+  hash = `${hash || ''}`;
   hash = hash.replace(/^#*/g, ''); // trim # on the left
   hash = hash.replace(/\?*$/g, ''); // trim ? on the right
   hash = hash.replace(/\/*$/g, ''); // trim / on the right
@@ -20,7 +20,7 @@ const parseHashPathObject = (hash) => {
     return {
       hash,
       hashPathname: hash,
-      hashSearch: null,
+      hashSearch: '',
     };
   } else {
     const hashPathname = hash.slice(0, questionMarkIndex);
@@ -34,7 +34,7 @@ const parseHashPathObject = (hash) => {
 };
 
 exports.historyAwext = ((window) => {
-  const historyAwext = awextify('historyAwext', {
+  const historyAwext = awextify({ awextName: 'historyAwext', bindThisToBase: true }, {
     goto(data, unused, url) {
       window.history.pushState(data, '', url);
     },
@@ -42,33 +42,40 @@ exports.historyAwext = ((window) => {
       newHash = `${newHash}`;
       const newHashPathObject = parseHashPathObject(newHash);
       const currentHashPathname = `${this.hashPathname}`;
-      const absolutePathname = pathSolve([currentHashPathname, newHashPathObject.hashPathname]);
-      this.hash = absolutePathname + newHashPathObject.hashSearch;
+      let absolutePathname = pathSolve([currentHashPathname, newHashPathObject.hashPathname]);
+      absolutePathname = absolutePathname.replace(/^\/*/g, '');
+      absolutePathname = absolutePathname.replace(/\/*$/g, '');
+      const hash = '/' + absolutePathname + newHashPathObject.hashSearch;
+      this.hash = hash;
       this.goto(data, '', '#' + this.hash);
     },
     get hash() {
-      return historyAwext.awextGetPath('hash') || '';
+      return this.awextGetPath('hash') || '';
     },
     set hash(newHash) {
       const hashPathObject = parseHashPathObject(newHash);
       // set it in
-      historyAwext.awextSetPath('hash', hashPathObject.hash);
-      historyAwext.awextSetPath('hashPathname', hashPathObject.hashPathname);
-      historyAwext.awextSetPath('hashSearch', hashPathObject.hashSearch);
+      this.awextSetPath('hash', hashPathObject.hash);
+      this.awextSetPath('hashPathname', hashPathObject.hashPathname);
+      this.awextSetPath('hashSearch', hashPathObject.hashSearch);
     },
     get hashPathname() {
-      return historyAwext.awextGetPath('hashPathname') || '/';
+      return this.awextGetPath('hashPathname') || '/';
     },
     get hashSearch() {
-      return historyAwext.awextGetPath('hashSearch') || '';
+      return this.awextGetPath('hashSearch') || '';
     },
     set currentState(currentState) {
-      historyAwext.awextSetPath('currentState', currentState);
+      this.awextSetPath('currentState', currentState);
     },
     get currentState() {
-      return historyAwext.awextGetPath('currentState');
+      return this.awextGetPath('currentState');
     },
   });
+
+  // init
+  historyAwext.hash = window.location.hash;
+
   // hashChangeDetecter
   function emitHashChangeIfNeeded(state) {
     if (historyAwext.hash !== window.location.hash) {
@@ -98,6 +105,7 @@ exports.historyAwext = ((window) => {
 
   // event hashchange
   window.addEventListener('hashchange', () => {
+    historyAwext.currentState = undefined;
     emitHashChangeIfNeeded();
     // historyAwext.awextEmit('hashchange', null, '', window.location);
   });

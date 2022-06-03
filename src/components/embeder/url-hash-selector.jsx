@@ -20,14 +20,14 @@ exports.URLHashSelector = (props) => {
   }, React);
   const { children } = props;
   const childrenArray = (Array.isArray(children)) ? children : [children];
-  const { hash } = window.location;
+  const { hashPathname } = historyAwext;
   // console.log(children, 'children');
   return (
     <>
       {childrenArray.find((c) => {
         let matched = null;
         if (typeof c === 'object' && typeof c.props === 'object') {
-          const embedFactor = hash.slice(1);
+          const embedFactor = hashPathname;
           const { embedTest } = c.props;
           if (embedTest instanceof RegExp) {
             matched = embedTest.exec(embedFactor);

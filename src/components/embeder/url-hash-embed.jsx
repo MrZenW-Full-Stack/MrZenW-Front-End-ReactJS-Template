@@ -8,12 +8,13 @@
 const React = require('react');
 const PropTypes = require('prop-types');
 const { Embed } = require('./embed');
+const { historyAwext } = require('./history_awext');
 
 exports.URLHashEmbed = (props) => {
   const { embedTest, embedComponent, children } = props;
   const embedProps = Object.assign({}, props, {
     embedTest,
-    embedFactor: window.location.hash.slice(1),
+    embedFactor: historyAwext.hashPathname,
     embedComponent,
   });
   return (
