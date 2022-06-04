@@ -17,7 +17,7 @@ chmod 644 ~/.ssh/known_hosts
 DATE=`date '+%Y%m%d'`
 TIME=`date '+%H%M%S'`
 
-export APP_PUBLIC_DIR="_app_/$DATE/$TIME/"
+export APP_PUBLIC_DIR="_mrzenw.com_/$DATE/$TIME/"
 
 export API_BASE_URL=//api.mrzenw.com/api
 export WEBSITE_APP_URL=mrzenw.com
